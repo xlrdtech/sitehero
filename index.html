@@ -128,16 +128,18 @@
         .hero-section {
             height: 90vh;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             overflow: hidden;
+            background-color: #000;
         }
-        .hero-banner-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center center;
+        .hero-section iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.77vh; /* 100 * (16/9) */
+            min-width: 100%;
+            height: 56.25vw; /* 100 * (9/16) */
+            min-height: 100%;
+            transform: translate(-50%, -50%);
         }
         
         .command-section, .heroes-section, .cta-section { padding: 5rem 0; }
@@ -520,9 +522,11 @@
         <main>
             <!-- Section 1: Hero -->
             <section class="hero-section">
-                <a href="#command" class="l7s-fade-in" style="width:100%; height:100%;">
-                    <img src="https://player.cloudinary.com/embed/?cloud_name=dwzg1q4kb&public_id=87786A06-54C2-4F87-A960-8D0B2B78383C_Copy_jkcdq4&profile=cld-looping" alt="L7S Hero Command Center" class="hero-banner-img">
-                </a>
+                <iframe
+                    src="https://player.cloudinary.com/embed/?cloud_name=dwzg1q4kb&public_id=87786A06-54C2-4F87-A960-8D0B2B78383C_Copy_jkcdq4&autoplay=true&loop=true&muted=true"
+                    allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
             </section>
 
             <!-- Section 2: Streamline A Strategy  (Gemini API) -->
